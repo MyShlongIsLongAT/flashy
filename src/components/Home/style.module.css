@@ -1,0 +1,31 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.wordBox{
+    padding: 30px;
+    font-family: Arial;
+    font-size: 20px;
+    background-color: 	#E0E0E0;
+    height: 10%;
+    border-radius: 15px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flashCard{
+    padding: 30px;
+    font-family: Arial;
+    font-size: 20px;
+    background-color: 	#E0E0E0;
+    height: 200px;
+    border-radius: 15px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
