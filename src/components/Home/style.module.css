@@ -10,7 +10,7 @@
     font-size: 20px;
     background-color: 	#E0E0E0;
     height: 10%;
-    border-radius: 15px;
+    border-radius: 30px;
     width: 50%;
     display: flex;
     justify-content: space-between;
@@ -20,12 +20,17 @@
 .flashCard{
     padding: 30px;
     font-family: Arial;
-    font-size: 20px;
+    font-size: 30px;
     background-color: 	#E0E0E0;
-    height: 200px;
+    height: 250px;
     border-radius: 15px;
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flashCardArrows{
+    margin-left: 20px;
+    margin-right: 20px;
 }
