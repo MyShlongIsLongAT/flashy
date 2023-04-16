@@ -1,57 +1,34 @@
-import React, {useEffect, useState} from 'react';
-import axios from "axios";
+import React, {useContext, useState} from 'react';
 import WordList from "./WordList";
 import FlashCard from "./FlashCard";
-import {Dna} from "react-loader-spinner";
 import CSVUploader from "../CSVUploader/CSVUploader";
+import DropDown from "./DropDown";
+import {deckContext} from "../../services/DeckContext";
 
-function HomePage(props) {
-    const [words, setWords] = useState([]);
-    const [loadingInProgress, setLoading] = useState(true);
+function HomePage() {
+    const {data, decks} = useContext(deckContext);
+    const [selectedDeck, setDeck] = useState(decks[0]);
 
-    let instance = axios.create({
-        baseURL: 'https://api.servker.cc/api/',
-        headers: {'Authorization': 'Bearer ' + process.env.REACT_APP_API_KEY}
-    });
-
-    useEffect(() => {
-        instance.get('/flashcards?populate=*')
-            .then(response => {
-                let result = response.data.data;
-                setWords(sortWords(result));
-            })
-        setLoading(false);
-    }, []);
+    const handleDeckChange = (value) => {
+        setDeck(value);
+    }
 
     return (
         <div>
-            {loadingInProgress ? (
-                <div>
-                    <Dna
-                        visible={true}
-                        height="80"
-                        width="80"
-                        ariaLabel="dna-loading"
-                        wrapperStyle={{}}
-                        wrapperClass="dna-wrapper"
-                    />
-                </div>
-
-            ) : (
-                <div>
-                    <h1>Flash Card</h1>
-                    <FlashCard words={words}/>
-                    <WordList words={words}/>
-                    <CSVUploader/>
-                </div>
-            )}
+            <div>
+                <h1>Flash Card</h1>
+                <DropDown onChange={handleDeckChange} decks={decks}/>
+                <FlashCard words={sortWords(data, selectedDeck)}/>
+                <WordList words={sortWords(data, selectedDeck)}/>
+                <CSVUploader/>
+            </div>
         </div>
     )
         ;
 }
 
-let sortWords = (data) => {
-    let chosenDeck = data.filter(deck => deck.attributes.name === "english");
+const sortWords = (data, selectedDeck) => {
+    let chosenDeck = data.filter(deck => deck.attributes.name === selectedDeck);
     let chosenWords = chosenDeck[0].attributes.record;
     chosenWords = chosenWords.sort((a, b) => {
         if (a.term.toLowerCase() < b.term.toLowerCase()) {
