@@ -3,13 +3,13 @@ import axios from "axios";
 import WordList from "./WordList";
 import FlashCard from "./FlashCard";
 import {Dna} from "react-loader-spinner";
+import CSVUploader from "../CSVUploader/CSVUploader";
 
 function HomePage(props) {
     const [words, setWords] = useState([]);
     const [loadingInProgress, setLoading] = useState(true);
 
-
-    const instance = axios.create({
+    let instance = axios.create({
         baseURL: 'https://api.servker.cc/api/',
         headers: {'Authorization': 'Bearer ' + process.env.REACT_APP_API_KEY}
     });
@@ -24,7 +24,6 @@ function HomePage(props) {
     }, []);
 
     return (
-
         <div>
             {loadingInProgress ? (
                 <div>
@@ -43,8 +42,8 @@ function HomePage(props) {
                     <h1>Flash Card</h1>
                     <FlashCard words={words}/>
                     <WordList words={words}/>
+                    <CSVUploader/>
                 </div>
-
             )}
         </div>
     )
@@ -52,13 +51,13 @@ function HomePage(props) {
 }
 
 let sortWords = (data) => {
-    let chosenDeck = data.filter(deck => deck.attributes.name === "test");
+    let chosenDeck = data.filter(deck => deck.attributes.name === "english");
     let chosenWords = chosenDeck[0].attributes.record;
     chosenWords = chosenWords.sort((a, b) => {
-        if (a.term < b.term) {
+        if (a.term.toLowerCase() < b.term.toLowerCase()) {
             return -1;
         }
-        if (a.term > b.term) {
+        if (a.term.toLowerCase() > b.term.toLowerCase()) {
             return 1;
         }
         return 0;
