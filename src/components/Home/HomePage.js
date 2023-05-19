@@ -4,6 +4,7 @@ import FlashCard from "./FlashCard";
 import CSVUploader from "../CSVUploader/CSVUploader";
 import DropDown from "./DropDown";
 import {deckContext} from "../../services/DeckContext";
+import {LearnBlock} from "../Learning/LearnBlock";
 
 function HomePage() {
     const {data, decks} = useContext(deckContext);
@@ -16,8 +17,9 @@ function HomePage() {
     return (
         <div>
             <div>
-                <h1>Flash Card</h1>
+                <h1>Flashy</h1>
                 <DropDown onChange={handleDeckChange} decks={decks}/>
+                <LearnBlock words={sortWords(data, selectedDeck)}/>
                 <FlashCard words={sortWords(data, selectedDeck)}/>
                 <WordList words={sortWords(data, selectedDeck)}/>
                 <CSVUploader/>

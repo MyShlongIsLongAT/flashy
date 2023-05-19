@@ -1,0 +1,39 @@
+.learnBlock{
+    padding: 20px;
+    font-family: Arial;
+    font-size: 20px;
+    background-color: #E0E0E0;
+    height: 250px;
+    border-radius: 15px;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.input {
+    padding-right: 10px;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    width: 55%;
+    padding: 12px 20px;
+    border: 2px solid darkgray;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+button{
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #96ADC8;
+    border-radius: 15px;
+    background-color: #96ADC8;
+}
+
+button:hover{
+    border-color: #879bb4;
+    background-color: #879bb4;
+}

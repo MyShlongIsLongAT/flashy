@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import styles from './style.module.css';
+import styles from './home.module.css';
 import {BsArrowLeftSquareFill, BsArrowRightSquareFill} from "react-icons/bs";
 
 function FlashCard(props) {
@@ -25,13 +25,10 @@ function FlashCard(props) {
 
     const handleKeyDown = (event) => {
         if (event.code === "Enter") {
-            console.log("flip")
-            handleFlipCard()
+            handleFlipCard();
         } else if (event.code === "ArrowRight") {
-            console.log("next");
             handleNextPair();
         } else if (event.code === "ArrowLeft") {
-            console.log("previous");
             handlePrevPair();
         }
     }
@@ -50,15 +47,13 @@ function FlashCard(props) {
     const handleFlipCard = () => {
         if (curTask === curPair.term) {
             setCurTask(curPair.definition);
-            console.log("changed to definition");
         } else {
             setCurTask(curPair.term);
-            console.log("changed to term");
         }
     }
 
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.flashcardWrapper}>
             <BsArrowLeftSquareFill size={70} color={"#96ADC8"} className={styles.flashCardArrows}
                                    onClick={handlePrevPair}/>
             <div className={styles.flashCard} onClick={handleFlipCard}>
