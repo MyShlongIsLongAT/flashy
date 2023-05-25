@@ -1,39 +1,45 @@
-import React, {useState, createContext, useEffect} from 'react';
-import axios from 'axios';
-import {Dna} from "react-loader-spinner";
+import React, {useState, createContext, useContext, useEffect} from 'react';
+import {DataContext} from "./DataContext";
 
-export const deckContext = createContext([]);
+export const DeckContext = createContext([]);
 
-export const DeckProvider = (props) => {
-    const [decks, setDecks] = useState([]);
-    const [data,setData] = useState([]);
+export const DeckProvider = ({children}) => {
+    const [deck, setDeck] = useState([]);
+    const [selectedDeck, setSelectedDeck] = useState("test");
     const [loading, setLoading] = useState(true);
 
-    let instance = axios.create({
-        baseURL: 'https://api.servker.cc/api/',
-        headers: {'Authorization': 'Bearer ' + process.env.REACT_APP_API_KEY}
-    });
+    const {data} = useContext(DataContext);
 
-    const fetchData = async () => {
-        instance.get('/flashcards?populate=*')
-            .then(response => {
-                let result = response.data.data;
-                setData(result);
-                setDecks(result.map(item => item.attributes.name));
-                setLoading(false);
-            })
+    const sortWords = (data, selectedDeck) => {
+        let chosenDeck = data.filter(deck => deck.attributes.name === selectedDeck);
+        let chosenWords = chosenDeck[0].attributes.record;
+        chosenWords = chosenWords.sort((a, b) => {
+            if (a.term.toLowerCase() < b.term.toLowerCase()) {
+                return -1;
+            }
+            if (a.term.toLowerCase() > b.term.toLowerCase()) {
+                return 1;
+            }
+            return 0;
+        });
+        setDeck(chosenWords);
     }
 
-    useEffect(() => {
-        if (decks && !decks.length) {
+    const updateSelectedDeck = (value) => {
+        setSelectedDeck(value);
+    };
+
+    useEffect(()=>{
+        if (deck && !deck.length) {
             setLoading(true);
         }
-        fetchData();
-    }, []);
+        sortWords(data,selectedDeck);
+    }, [selectedDeck])
+
 
     return (
-        <deckContext.Provider value={{data, decks, loading}}>
-            {decks.length ? props.children : <Dna/>}
-        </deckContext.Provider>
+        <DeckContext.Provider value={{deck, updateSelectedDeck}}>
+            {children}
+        </DeckContext.Provider>
     );
 };

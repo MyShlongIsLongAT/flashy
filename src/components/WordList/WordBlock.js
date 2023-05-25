@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './home.module.css';
+import styles from '../Home/home.module.css';
 
 function WordBlock(props) {
     return (
