@@ -1,24 +1,25 @@
-import React, {useContext} from 'react';
-import WordList from "../WordList/WordList";
-import FlashCard from "../Flashcard/FlashCard";
-import CSVUploader from "../CSVUploader/CSVUploader";
-import {LearnBlock} from "../Learn/LearnBlock";
-import {DeckContext} from "../../services/DeckContext";
-import DropDown from "../DeckSelector/DropDown";
+import React from 'react';
+import styles from './home.module.css'
+import Footer from "../Footer/Footer";
+import Navigation from "../Navigation/Navigation";
 
 function HomePage() {
-    const {deck} = useContext(DeckContext);
 
     return (
         <div>
-            <div>
-                <h1>Flashy</h1>
-                <DropDown/>
-                <LearnBlock words={deck}/>
-                <FlashCard words={deck}/>
-                <WordList words={deck}/>
-                <CSVUploader/>
+            <Navigation/>
+            <div className={styles.contentWrapper}>
+                <div>
+                    <div className={styles.title}>
+                        FLASHY
+                    </div>
+                    <div className={styles.subtitle}>An open-source flashcard solution</div>
+                </div>
+                <div className={styles.contentButton}>
+                    <button>Get started</button>
+                </div>
             </div>
+            <Footer/>
         </div>
     );
 }

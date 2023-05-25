@@ -1,9 +1,48 @@
+.contentWrapper{
+    text-align: center;
+    position: relative;
+    top: 250px;
+}
+
+.title{
+    font-weight: bolder;
+    font-size: 120px;
+    letter-spacing: 0.07em;
+}
+
+.subtitle{
+    font-weight: bolder;
+    font-size: 24px;
+    letter-spacing: 0.07em;
+}
+
+.contentButton{
+    margin-top: 50px;
+}
+
+.contentButton button{
+    font-family: 'Jaldi';
+    background: #69D1C5;
+    border-radius: 15px;
+    width: 231px;
+    height: 46px;
+    border: none;
+    font-weight: bolder;
+    font-size: 24px;
+    letter-spacing: 0.07em;
+}
+
+.contentButton button:hover{
+    background: #54A79D;
+}
+
 .flashcardWrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
 }
+
 .wordBox{
     padding: 30px;
     font-family: Arial;
