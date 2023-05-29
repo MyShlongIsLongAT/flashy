@@ -1,6 +1,6 @@
 import * as React from 'react';
+import {useEffect, useState} from 'react';
 import styles from "./learning.module.css";
-import {useEffect, useState} from "react";
 
 export const LearnBlock = (props) => {
     const initialHint = "input the wanted term";

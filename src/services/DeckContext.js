@@ -1,11 +1,11 @@
-import React, {useState, createContext, useContext, useEffect} from 'react';
+import React, {createContext, useContext, useEffect, useState} from 'react';
 import {DataContext} from "./DataContext";
 
 export const DeckContext = createContext([]);
 
 export const DeckProvider = ({children}) => {
     const [deck, setDeck] = useState([]);
-    const [selectedDeck, setSelectedDeck] = useState("test");
+    const [selectedDeck, setSelectedDeck] = useState("english");
     const [loading, setLoading] = useState(true);
 
     const {data} = useContext(DataContext);

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import styles from '../Home/home.module.css';
+import styles from '../../Pages/Home/home.module.css';
 import {BsArrowLeftSquareFill, BsArrowRightSquareFill} from "react-icons/bs";
 
 function FlashCard(props) {

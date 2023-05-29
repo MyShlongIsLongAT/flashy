@@ -1,14 +1,15 @@
 import './App.css';
-import HomePage from "./components/Home/HomePage";
 import {DataProvider} from "./services/DataContext";
 import {DeckProvider} from "./services/DeckContext";
+import DeckSelector from "./Pages/DeckSelector/DeckSelector";
 
 function App() {
     return (
         <div className="App">
             <DataProvider>
                 <DeckProvider>
-                    <HomePage/>
+                    {/*<HomePage/>*/}
+                    <DeckSelector/>
                 </DeckProvider>
             </DataProvider>
         </div>

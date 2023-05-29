@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './home.module.css'
-import Footer from "../Footer/Footer";
-import Navigation from "../Navigation/Navigation";
+import mainStyles from '../../styles/main.module.css'
+import Footer from "../../components/Footer/Footer";
+import Navigation from "../../components/Navigation/Navigation";
 
 function HomePage() {
 
@@ -10,10 +11,10 @@ function HomePage() {
             <Navigation/>
             <div className={styles.contentWrapper}>
                 <div>
-                    <div className={styles.title}>
+                    <div className={mainStyles.title}>
                         FLASHY
                     </div>
-                    <div className={styles.subtitle}>An open-source flashcard solution</div>
+                    <div className={mainStyles.subtitle}>An open-source flashcard solution</div>
                 </div>
                 <div className={styles.contentButton}>
                     <button>Get started</button>

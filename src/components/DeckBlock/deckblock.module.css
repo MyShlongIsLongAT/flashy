@@ -1,0 +1,14 @@
+.deckWrapper {
+    background-color: #424250;
+    width: 150px;
+    height: 100px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.deckWrapper:hover {
+    background-color: #343440;
+}

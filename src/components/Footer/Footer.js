@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './footer.module.css'
 import flashyLogo from '../../vectors/logo192.png';
-import githubLogo from '../../vectors/github.png'
+import {AiFillGithub} from "react-icons/ai";
 
 const Footer = () => {
     return (
@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
             <div className={styles.footerLastItem}>
                 <a href="https://github.com/MyShlongIsLongAT/" target="_blank" rel="noreferrer">
-                    <img src={githubLogo} alt=""/>
+                    <AiFillGithub size={60}/>
                 </a>
             </div>
         </div>
