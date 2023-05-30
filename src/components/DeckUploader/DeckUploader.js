@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import axios from "axios";
 import styles from './deckuploader.module.css';
-import {AiOutlinePlus} from "react-icons/ai";
+import {IoArrowBackCircleSharp} from "react-icons/io5";
+import {IoMdAddCircle} from "react-icons/io";
 
 const DeckUploader = (props) => {
     const [jsonData, setJsonData] = useState(null);
@@ -28,6 +29,9 @@ const DeckUploader = (props) => {
     return (
         <div className={styles.popupWrapper}>
             <div>
+                <div className={styles.backIcon} onClick={props.handleClose}><IoArrowBackCircleSharp color={"#69D1C5"} size={40}
+                                                                         className={styles.backIcon}/></div>
+
                 <div>deck name:</div>
                 <div><input type="text" placeholder="name of the deck" className={styles.nameInput}
                             onChange={handleDeckNameChange}/></div>
@@ -35,7 +39,7 @@ const DeckUploader = (props) => {
                 <div className={styles.fileSelector}>
                     <label>
                         <input type="file" onChange={handleFileUpload} accept=".csv"/>
-                        <AiOutlinePlus/>
+                        <IoMdAddCircle color={"#757575"} size={40} className={styles.fileSelector}/>
                     </label>
                 </div>
                 <div className={styles.uploadButtonWrapper}>

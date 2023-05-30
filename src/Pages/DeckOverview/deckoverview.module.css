@@ -1,0 +1,49 @@
+.contentWrapper {
+    margin-top: 30px;
+}
+
+.overviewGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    column-gap: 200px;
+}
+
+.tabNavigationGrid {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+    width: 500px;
+    height: 1027px;
+    background-color: #424250;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tabNavigationItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #69D1C5;
+    width:175px;
+    height:175px;
+    border-radius: 50%;
+}
+
+.tabNavigationItemText{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.deckOverview {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    row-gap: 50px;
+}
+

@@ -1,0 +1,21 @@
+.flashcardWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashCard {
+    font-size: 30px;
+    background-color: #424250;
+    height: 300px;
+    border-radius: 15px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashCardArrows {
+    margin-left: 20px;
+    margin-right: 20px;
+}

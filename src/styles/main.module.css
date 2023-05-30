@@ -9,3 +9,8 @@
     font-size: 24px;
     letter-spacing: 0.07em;
 }
+
+.linkItem{
+    text-decoration: inherit;
+    color: inherit;
+}

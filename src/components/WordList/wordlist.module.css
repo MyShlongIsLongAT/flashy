@@ -1,0 +1,24 @@
+.wordListWrapper{
+    display: flex;
+    justify-content: center;
+    height: 657px;
+    overflow: auto;
+    padding: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #69D1C5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #54A79D;
+}

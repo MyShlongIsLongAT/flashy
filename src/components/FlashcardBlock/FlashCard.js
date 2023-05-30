@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import styles from '../../Pages/Home/home.module.css';
-import {BsArrowLeftSquareFill, BsArrowRightSquareFill} from "react-icons/bs";
+import styles from './flashcard.module.css';
+import {
+    BsCaretRightSquareFill,
+    BsFillCaretLeftSquareFill
+} from "react-icons/bs";
 
 function FlashCard(props) {
     const [curPair, setCurPair] = useState([]);
@@ -53,15 +56,18 @@ function FlashCard(props) {
     }
 
     return (
-        <div className={styles.flashcardWrapper}>
-            <BsArrowLeftSquareFill size={70} color={"#96ADC8"} className={styles.flashCardArrows}
-                                   onClick={handlePrevPair}/>
-            <div className={styles.flashCard} onClick={handleFlipCard}>
-                {curTask}
+        <div>
+            <div className={styles.flashcardWrapper}>
+                <BsFillCaretLeftSquareFill size={60} color={"#69D1C5"} className={styles.flashCardArrows}
+                                       onClick={handlePrevPair}/>
+                <div className={styles.flashCard} onClick={handleFlipCard}>
+                    {curTask}
+                </div>
+                <BsCaretRightSquareFill size={60} color={"#69D1C5"} className={styles.flashCardArrows}
+                                        onClick={handleNextPair}/>
             </div>
-            <BsArrowRightSquareFill size={70} color={"#96ADC8"} className={styles.flashCardArrows}
-                                    onClick={handleNextPair}/>
         </div>
+
     );
 }
 

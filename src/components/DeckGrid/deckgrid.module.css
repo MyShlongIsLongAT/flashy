@@ -1,3 +1,6 @@
+.wrapper{
+    position:relative;
+}
 .gridWrapper {
     display: flex;
     justify-content: center;
