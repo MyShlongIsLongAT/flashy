@@ -1,0 +1,17 @@
+.contentWrapper{
+    background-color: #1E1E1E;
+    height: 100vh;
+}
+
+.navigationButton{
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+}
+
+.learnBlockComponentWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

@@ -2,7 +2,7 @@
     padding: 20px;
     font-size: 20px;
     background-color: #424250;
-    height: 30px;
+    height: 3vh;
     border-radius: 15px;
     width: 800px;
     display: flex;
@@ -11,5 +11,5 @@
 }
 
 .wordBlockWrapper{
-    margin-bottom: 15px;
+    margin-bottom: 1.5vh;
 }

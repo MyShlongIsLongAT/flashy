@@ -15,7 +15,6 @@ export const LearnBlock = (props) => {
             setCurPair(props.words[curTaskId])
             setCurTask(curPair.definition)
         } catch (e) {
-            console.log("waiting for data")
         }
     }, [props, curTaskId, curPair]);
 
@@ -26,7 +25,7 @@ export const LearnBlock = (props) => {
         };
     }, [curTask, guess]);
 
-    const handleUserInput = (event) =>{
+    const handleUserInput = (event) => {
         setGuess(event.target.value);
     }
 
@@ -48,7 +47,7 @@ export const LearnBlock = (props) => {
     };
 
     const handleCheckInput = () => {
-        if (guess === curPair.term){
+        if (guess === curPair.term) {
             setGuess("");
             setHint(initialHint);
             handleNextPair()
@@ -61,14 +60,21 @@ export const LearnBlock = (props) => {
     return (
         <div>
             <div className={styles.learnBlock}>
-                <div className={styles.definition}>
+                <div>
                     <p>definition</p>
-                    {curTask}
+                    <div className={styles.definition}>{curTask}</div>
                 </div>
                 <div className={styles.input}>
-                    <input type="text" placeholder={hint} onChange={handleUserInput} value={guess}/>
-                    <button onClick={handleHint}>idk</button>
-                    <button onClick={handleCheckInput}>Submit</button>
+                    <div><input type="text" placeholder={hint} onChange={handleUserInput} value={guess}/></div>
+                    <div className={styles.interactionButtons}>
+                        <div>
+                            <button onClick={handleHint}>idk</button>
+                        </div>
+                        <div>
+                            <button onClick={handleCheckInput}>Submit</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

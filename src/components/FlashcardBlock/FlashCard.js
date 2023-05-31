@@ -15,7 +15,6 @@ function FlashCard(props) {
             setCurPair(props.words[curTaskId])
             setCurTask(curPair.definition)
         } catch (e) {
-            console.log("waiting for data")
         }
     }, [props, curTaskId, curPair]);
 
@@ -27,7 +26,7 @@ function FlashCard(props) {
     }, [curTask]);
 
     const handleKeyDown = (event) => {
-        if (event.code === "Enter") {
+        if (event.code === "Space") {
             handleFlipCard();
         } else if (event.code === "ArrowRight") {
             handleNextPair();

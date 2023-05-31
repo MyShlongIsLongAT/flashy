@@ -31,7 +31,7 @@ const DeckGrid = () => {
                 <div className={styles.deckGrid}>
                     {
                         decks.map((deck) => <div onClick={() => handleOptionChange(deck)}><Link
-                            to="/deck-overview" className={linkStyles.linkItem}><DeckBlock deckName={deck}/></Link>
+                            to="/overview" className={linkStyles.linkItem}><DeckBlock deckName={deck}/></Link>
                         </div>)
                     }
                     <div className={gridBoxStyle.deckWrapper} onClick={toggleDeckAddPopup}><AiOutlinePlus/></div>

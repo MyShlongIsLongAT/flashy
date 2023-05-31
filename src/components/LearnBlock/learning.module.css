@@ -1,39 +1,60 @@
-.learnBlock{
-    padding: 20px;
-    font-family: Arial;
+.learnBlock {
+    padding:3vh;
     font-size: 20px;
-    background-color: #E0E0E0;
-    height: 250px;
+    background-color: #424250;
+    height: 25vh;
     border-radius: 15px;
-    width: 60%;
-    margin-top: 20px;
-}
-
-.input {
-    padding-right: 10px;
-    margin-top: 10vh;
+    width: 40vw;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-input{
-    width: 55%;
-    padding: 12px 20px;
-    border: 2px solid darkgray;
-    border-radius: 15px;
-    background-color: transparent;
+.input {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20%;
 }
 
-button{
-    width: 70px;
-    height: 40px;
+.interactionButtons{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 3vw;
+}
+
+.input input {
+    padding-left: 1vw;
+    background-color: #757575;
+    border-style: none;
+    border-radius: 10px;
+    height: 6vh;
+    color: #FFFFFF;
+    font-family: "Jaldi";
+    font-size: 2.1vh;
+    width: 40vh;
+}
+
+.input input::placeholder{
+    color: #FFFFFF;
+}
+
+button {
+    font-family: "Jaldi";
+    font-size: 2.1vh;
+    width: 4vw;
+    height: 6vh;
     text-align: center;
-    border: 2px solid #96ADC8;
+    border-style: none;
     border-radius: 15px;
-    background-color: #96ADC8;
+    background-color: #69D1C5;
+    color: #FFFFFF;
 }
 
-button:hover{
-    border-color: #879bb4;
-    background-color: #879bb4;
+button:hover {
+    background-color: #54A79D;
+}
+
+.definition{
+    margin-top: 2vh;
+    font-weight: bolder;
 }
