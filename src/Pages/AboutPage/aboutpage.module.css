@@ -1,0 +1,42 @@
+.contentWrapper{
+    padding: 2vw;
+}
+
+.contentGrid{
+    margin-top: 15vh;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingWrapper{
+    text-align: center;
+}
+
+.aboutContent{
+    margin-top: 5vh;
+    background-color: #424250;
+    width: 60vw;
+    height: auto;
+    text-align: initial;
+    font-size: 2.5vh;
+    border-radius: 15px;
+    padding: 1vw;
+}
+
+.aboutShlongImage{
+    height: 50vh;
+    border-radius: 15px;
+}

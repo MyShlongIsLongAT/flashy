@@ -32,10 +32,10 @@ const DeckUploader = (props) => {
                 <div className={styles.backIcon} onClick={props.handleClose}><IoArrowBackCircleSharp color={"#69D1C5"} size={40}
                                                                          className={styles.backIcon}/></div>
 
-                <div>deck name:</div>
+                <div className={styles.inputText}>deck name:</div>
                 <div><input type="text" placeholder="name of the deck" className={styles.nameInput}
                             onChange={handleDeckNameChange}/></div>
-                <div>deck file (*.csv):</div>
+                <div className={styles.inputText}>deck file (*.csv):</div>
                 <div className={styles.fileSelector}>
                     <label>
                         <input type="file" onChange={handleFileUpload} accept=".csv"/>

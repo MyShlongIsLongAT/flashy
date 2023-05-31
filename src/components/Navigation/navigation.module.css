@@ -6,10 +6,6 @@
     margin-right: auto;
 }
 
-.navigationWrapper img{
-    width: 50px;
-}
-
 .navigationGridItems{
     display: flex;
     align-items: center;
@@ -17,6 +13,6 @@
 }
 
 .navigationGridItem{
-    margin: 0 50px;
-    font-size: 20px;
+    margin: 0 1vw;
+    font-size: 2.1vh;
 }

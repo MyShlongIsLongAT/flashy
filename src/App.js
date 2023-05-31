@@ -8,6 +8,7 @@ import React from "react";
 import DeckOverview from "./Pages/DeckOverview/DeckOverview";
 import FlashcardPage from "./Pages/FlashcardPage/FlashcardPage";
 import LearnPage from "./Pages/LearnPage/LearnPage";
+import AboutPage from "./Pages/AboutPage/AboutPage";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                         <Route exact path="/overview" element={<DeckOverview/>}/>
                         <Route exact path="/flashcard" element={<FlashcardPage/>}/>
                         <Route exact path="/learn" element={<LearnPage/>}/>
+                        <Route exact path="/about" element={<AboutPage/>}/>
                     </Routes>
                 </DeckProvider>
             </DataProvider>

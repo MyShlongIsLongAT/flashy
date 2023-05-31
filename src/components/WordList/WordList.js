@@ -10,7 +10,6 @@ function WordList(props) {
                     props.words.map((word) => <WordBlock term={word.term} definition={word.definition}/>)
                 }
             </div>
-
         </div>
     );
 }

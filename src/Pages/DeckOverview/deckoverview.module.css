@@ -8,14 +8,14 @@
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
-    column-gap: 200px;
+    column-gap: 10vw;
 }
 
 .tabNavigationGrid {
     grid-column: 2 / 3;
     grid-row: 1 / span 2;
-    width: 500px;
-    height: 75vh;
+    width: 20vw;
+    height: 76vh;
     background-color: #424250;
     border-radius: 15px;
     display: flex;
@@ -29,15 +29,15 @@
     justify-content: center;
     align-items: center;
     background-color: #69D1C5;
-    width:175px;
-    height:175px;
+    width:9vw;
+    height:9vw;
     border-radius: 50%;
 }
 
 .tabNavigationItemText{
-    font-size: 20px;
+    font-size: 2.1vh;
     font-weight: bolder;
-    margin-top: 10px;
+    margin-top: 1vh;
     text-align: center;
 }
 
@@ -48,4 +48,3 @@
     width: auto;
     row-gap: 5vh;
 }
-

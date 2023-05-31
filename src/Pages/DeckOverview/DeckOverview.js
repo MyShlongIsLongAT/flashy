@@ -22,13 +22,13 @@ const DeckOverview = () => {
 
                         <Link to="/flashcard" className={linkStyles.linkItem}>
                             <div>
-                                <div className={styles.tabNavigationItem}><IoFlash size={85} color={"#424250"}/></div>
+                                <div className={styles.tabNavigationItem}><IoFlash size={100} color={"#424250"}/></div>
                                 <div className={styles.tabNavigationItemText}>Flashcard</div>
                             </div>
                         </Link>
                         <Link to="/learn" className={linkStyles.linkItem}>
                             <div>
-                                <div className={styles.tabNavigationItem}><BiBrain size={85} color={"#424250"}/></div>
+                                <div className={styles.tabNavigationItem}><BiBrain size={100} color={"#424250"}/></div>
                                 <div className={styles.tabNavigationItemText}>Learn</div>
                             </div>
                         </Link>

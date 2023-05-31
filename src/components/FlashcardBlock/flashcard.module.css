@@ -5,17 +5,17 @@
 }
 
 .flashCard {
-    font-size: 30px;
+    font-size: 3vh;
     background-color: #424250;
-    height: 35vh;
+    height: 30vh;
     border-radius: 15px;
-    width: 600px;
+    width: 25vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .flashCardArrows {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }

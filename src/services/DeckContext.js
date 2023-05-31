@@ -10,10 +10,13 @@ export const DeckProvider = ({children}) => {
 
     const {data} = useContext(DataContext);
 
-    const sortWords = (data, selectedDeck) => {
+    const selectDeck = (data, selectedDeck) => {
         let chosenDeck = data.filter(deck => deck.attributes.name === selectedDeck);
         let chosenWords = chosenDeck[0].attributes.record;
-        chosenWords = chosenWords.sort((a, b) => {
+        sortWords(chosenWords);
+    }
+    const sortWords = (words) => {
+        let sortedDeck = words.sort((a, b) => {
             if (a.term.toLowerCase() < b.term.toLowerCase()) {
                 return -1;
             }
@@ -22,7 +25,7 @@ export const DeckProvider = ({children}) => {
             }
             return 0;
         });
-        setDeck(chosenWords);
+        setDeck((sortedDeck))
     }
 
     const updateSelectedDeck = (value) => {
@@ -33,7 +36,7 @@ export const DeckProvider = ({children}) => {
         if (deck && !deck.length) {
             setLoading(true);
         }
-        sortWords(data,selectedDeck);
+        selectDeck(data, selectedDeck);
     }, [selectedDeck])
 
 

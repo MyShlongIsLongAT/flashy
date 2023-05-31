@@ -9,6 +9,7 @@ export const LearnBlock = (props) => {
     const [curTaskId, setCurTaskId] = useState(0);
     const [guess, setGuess] = useState("");
     const [hint, setHint] = useState(initialHint);
+    const [inputBorderColor, setInputBorderColor] = useState();
 
     useEffect(() => {
         try {
@@ -31,6 +32,7 @@ export const LearnBlock = (props) => {
 
     const handleHint = () => {
         setGuess("");
+        setInputBorderColor(styles.hintInput)
         setHint(curPair.term);
     }
 
@@ -50,9 +52,10 @@ export const LearnBlock = (props) => {
         if (guess === curPair.term) {
             setGuess("");
             setHint(initialHint);
+            setInputBorderColor(styles.correctInput)
             handleNextPair()
         } else {
-            alert("wrong")
+            setInputBorderColor(styles.wrongInput)
             setGuess("");
         }
     }
@@ -65,13 +68,13 @@ export const LearnBlock = (props) => {
                     <div className={styles.definition}>{curTask}</div>
                 </div>
                 <div className={styles.input}>
-                    <div><input type="text" placeholder={hint} onChange={handleUserInput} value={guess}/></div>
+                    <div><input type="text" placeholder={hint} onChange={handleUserInput} value={guess} className={inputBorderColor}/></div>
                     <div className={styles.interactionButtons}>
                         <div>
-                            <button onClick={handleHint}>idk</button>
+                            <button onClick={handleHint}>help</button>
                         </div>
                         <div>
-                            <button onClick={handleCheckInput}>Submit</button>
+                            <button onClick={handleCheckInput}>submit</button>
                         </div>
                     </div>
 

@@ -1,22 +1,21 @@
 .contentWrapper{
     text-align: center;
-    position: relative;
-    top: 250px;
+    margin-top: 15vh;
 }
 
 .contentButton{
-    margin-top: 50px;
+    margin-top: 10vh;
 }
 
 .contentButton button{
     font-family: 'Jaldi';
     background: #69D1C5;
     border-radius: 15px;
-    width: 231px;
-    height: 46px;
+    width: 10vw;
+    height: 4.5vh;
     border: none;
     font-weight: bolder;
-    font-size: 24px;
+    font-size: 2.5vh;
     letter-spacing: 0.07em;
 }
 
