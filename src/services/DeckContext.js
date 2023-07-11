@@ -11,8 +11,8 @@ export const DeckProvider = ({children}) => {
     const {data} = useContext(DataContext);
 
     const selectDeck = (data, selectedDeck) => {
-        let chosenDeck = data.filter(deck => deck.attributes.name === selectedDeck);
-        let chosenWords = chosenDeck[0].attributes.record;
+        let chosenDeck = data.filter(deck => deck.name === selectedDeck);
+        let chosenWords = chosenDeck[0].records;
         sortWords(chosenWords);
     }
     const sortWords = (words) => {

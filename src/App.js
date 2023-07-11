@@ -17,8 +17,8 @@ function App() {
                 <DeckProvider>
                     <Routes>
                         <Route exact path="*" element={<Homepage/>}/>
-                        <Route exact path="/decks" element={<DeckSelector/>}/>
                         <Route exact path="/overview" element={<DeckOverview/>}/>
+                        <Route exact path="/decks" element={<DeckSelector/>}/>
                         <Route exact path="/flashcard" element={<FlashcardPage/>}/>
                         <Route exact path="/learn" element={<LearnPage/>}/>
                         <Route exact path="/about" element={<AboutPage/>}/>

@@ -10,7 +10,7 @@ export const DataProvider = ({children}) => {
     const [loading, setLoading] = useState(true);
 
     let instance = axios.create({
-        baseURL: 'https://api.servker.cc/api/',
+        baseURL: 'https://api.servker.cc/items/',
         headers: {'Authorization': 'Bearer ' + process.env.REACT_APP_API_KEY}
     });
 
@@ -20,11 +20,12 @@ export const DataProvider = ({children}) => {
     }
 
     const fetchData = async () => {
-        instance.get('/flashcards?populate=*')
+        instance.get('/flashy')
             .then(response => {
                 let result = response.data.data;
+                console.log(result)
                 setData(result);
-                setDecks(sortDecks(result.map(item => item.attributes.name)));
+                setDecks(sortDecks(result.map(item => item.name)));
                 setLoading(false);
             })
     }

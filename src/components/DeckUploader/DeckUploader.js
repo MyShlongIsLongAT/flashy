@@ -23,6 +23,7 @@ const DeckUploader = (props) => {
     };
 
     const handlePost = () => {
+        console.log(jsonData)
         postToApi(jsonData, nameOfDeck);
     };
 
@@ -73,14 +74,12 @@ const csvFileToJson = (file) => {
 const postToApi = (deckInJSON, nameOfDeck) => {
     console.log(deckInJSON)
     const instance = axios.create({
-        baseURL: 'https://api.servker.cc/api',
+        baseURL: 'https://api.servker.cc/items',
         headers: {'Authorization': 'Bearer ' + process.env.REACT_APP_API_KEY}
     });
-    instance.post('/flashcards', {
-        "data": {
-            "name": nameOfDeck,
-            "record": deckInJSON
-        }
+    instance.post('/flashy', {
+        "name": nameOfDeck,
+        "records": deckInJSON
     })
         .then(function (response) {
             console.log(response);

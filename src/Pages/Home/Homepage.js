@@ -6,7 +6,7 @@ import Navigation from "../../components/Navigation/Navigation";
 import linkStyles from '../../styles/main.module.css'
 import {Link} from "react-router-dom";
 
-function Homepage() {
+const Homepage = () => {
 
     return (
         <div>
