@@ -3,7 +3,6 @@
     justify-content: center;
     height: 41vh;
     overflow: auto;
-    padding-right: 1vh;
 }
 
 .wordListWrapper::-webkit-scrollbar {

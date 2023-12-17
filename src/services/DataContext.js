@@ -23,7 +23,6 @@ export const DataProvider = ({children}) => {
         instance.get('/flashy')
             .then(response => {
                 let result = response.data.data;
-                console.log(result)
                 setData(result);
                 setDecks(sortDecks(result.map(item => item.name)));
                 setLoading(false);

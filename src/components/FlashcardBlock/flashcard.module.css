@@ -19,3 +19,14 @@
     margin-left: 1vw;
     margin-right: 1vw;
 }
+
+@media only screen and (max-width: 600px){
+  .flashCard {
+    height: 20vh;
+    width: 60vw;
+  }
+
+  .flashCardArrows {
+    height: 5vh;
+  }
+}

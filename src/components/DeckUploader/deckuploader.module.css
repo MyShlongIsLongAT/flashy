@@ -1,76 +1,78 @@
-.backIcon{
-    display: flex;
-    justify-content: right;
+.backIcon {
+  display: flex;
+  justify-content: right;
+  height: 3.5vh;
 }
 
-.backIcon:hover{
-    fill: #54A79D;
+.backIcon:hover {
+  fill: #54a79d;
 }
 
 .popupWrapper {
-    padding: 1.5vh;
-    font-size: 2.1vh;
-    font-weight: bolder;
-    background-color: #424250;
-    width: 15vw;
-    height: 20vh;
-    border-radius: 15px;
-    color: #FFFFFF;
-    text-align: left;
+  padding: 1.5vh;
+  font-size: 2.1vh;
+  font-weight: bolder;
+  background-color: #424250;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  color: #ffffff;
+  text-align: left;
 }
 
 .fileSelector {
-    margin-top: 0.3vh;
+  margin-top: 0.3vh;
+  height: 3.5vh;
 }
 
-.inputText{
-    margin-top: 0.3vh;
+.inputText {
+  margin-top: 0.3vh;
 }
 
-.fileSelector:hover{
-    fill: #343440;
+.fileSelector:hover {
+  fill: #343440;
 }
 
 .fileSelector input[type="file"] {
-    display: none;
+  display: none;
 }
 
 .nameInput {
-    margin-top: 0.3vh;
-    margin-bottom: 0.3vh;
-    padding: 0.3vh;
-    background-color: #757575;
-    border-style: none;
-    border-radius: 10px;
-    height: 20px;
-    color: #FFFFFF;
-    font-family: "Jaldi";
-    font-size: 2.1vh;
-    height: 2.5vh;
+  margin-top: 0.3vh;
+  margin-bottom: 0.3vh;
+  padding: 0.3vh;
+  background-color: #757575;
+  border-style: none;
+  border-radius: 10px;
+  height: 20px;
+  color: #ffffff;
+  font-family: "Jaldi";
+  font-size: 2.1vh;
+  height: 2.5vh;
 }
 
 .uploadButtonWrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .uploadButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Jaldi';
-    background: #69D1C5;
-    border-radius: 15px;
-    width: 50%;
-    height: 3vh;
-    border: none;
-    font-weight: bolder;
-    font-size: 2.5vh;
-    letter-spacing: 0.07em;
-    margin-top: 1.5vh;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jaldi";
+  background: #69d1c5;
+  border-radius: 15px;
+  width: 50%;
+  height: auto;
+  border: none;
+  font-weight: bolder;
+  font-size: 2.5vh;
+  letter-spacing: 0.07em;
+  margin-top: 1.5vh;
+  cursor: pointer;
 }
 
 .uploadButton:hover {
-    background: #54A79D;
+  background: #54a79d;
 }

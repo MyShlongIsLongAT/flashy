@@ -1,5 +1,5 @@
 .footerWrapper{
-    height: 12vh;
+    height: auto;
     width: 100%;
     position: fixed;
     bottom: 0vh;
@@ -29,7 +29,7 @@
     text-align: center;
 }
 
-.footerLastItem{;
+.footerLastItem{
     display: flex;
     align-items: center;
     text-align: center;
