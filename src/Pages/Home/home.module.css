@@ -11,7 +11,9 @@
     font-family: 'Jaldi';
     background: #69D1C5;
     border-radius: 15px;
-    width: 10vw;
+    width: auto;
+    padding-right: 2.5vw;
+    padding-left: 2.5vw;
     height: 4.5vh;
     border: none;
     font-weight: bolder;

@@ -1,15 +1,21 @@
-.wordBox{
-    padding: 1.4vh;
-    font-size: 1.5vh;
-    background-color: #424250;
-    height: 3vh;
-    border-radius: 15px;
-    width: 32vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.wordBox {
+  padding: 1.4vh;
+  font-size: 1.5vh;
+  background-color: #424250;
+  height: 3vh;
+  border-radius: 15px;
+  width: 32vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.wordBlockWrapper{
-    margin-bottom: 1.5vh;
+.wordBlockWrapper {
+  margin-bottom: 1.5vh;
+}
+
+@media only screen and (max-width: 480px) {
+  .wordBox{
+    width: 60vw;
+  }
 }

@@ -1,24 +1,30 @@
-.wordListWrapper{
-    display: flex;
-    justify-content: center;
-    height: 41vh;
-    overflow: auto;
-    padding-right: 1vh;
+.wordListWrapper {
+  display: flex;
+  justify-content: center;
+  height: 41vh;
+  overflow: auto;
+  padding-right: 1vh;
 }
 
 .wordListWrapper::-webkit-scrollbar {
-    width: 0.4vw;
+  width: 0.4vw;
 }
 
 .wordListWrapper::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 .wordListWrapper::-webkit-scrollbar-thumb {
-    background: #69D1C5;
-    border-radius: 10px;
+  background: #69d1c5;
+  border-radius: 10px;
 }
 
 .wordListWrapper::-webkit-scrollbar-thumb:hover {
-    background: #54A79D;
+  background: #54a79d;
+}
+
+@media only screen and (max-width: 480px) {
+  .wordListWrapper {
+    height: 20vh;
+  }
 }

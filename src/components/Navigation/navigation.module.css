@@ -1,5 +1,5 @@
 .navigationWrapper{
-    height: 8vh;
+    height: auto;
     background: linear-gradient(to left, #826AED, #8a2be2);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;

@@ -57,6 +57,9 @@ const csvFileToJson = (file) => {
     const convertedJSON = [];
 
     for (let i = 1; i < lines.length; i++) {
+        if (lines[i].trim() === '') {
+            continue;
+        }
         const obj = {};
         const currentLine = lines[i].split(',');
         for (let j = 0; j < headers.length; j++) {
@@ -64,10 +67,8 @@ const csvFileToJson = (file) => {
         }
         convertedJSON.push(obj);
     }
-    console.log(convertedJSON);
     let cleanedResult = JSON.stringify(convertedJSON).replace(/\\r/g, '');
     cleanedResult = JSON.parse(cleanedResult)
-    console.log(cleanedResult);
     return cleanedResult;
 }
 

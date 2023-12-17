@@ -1,21 +1,48 @@
-.wrapper{
-    position:relative;
+.wrapper {
+  position: relative;
 }
 .gridWrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+  overflow: auto;
 }
 
 .deckGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 2vh;
-    row-gap: 2vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2vh;
+  row-gap: 2vh;
+  overflow: auto;
 }
 
-.deckUploaderPosition{
-    display: flex;
-    justify-content: center;
-    margin-top: 2vh;
+.deckUploaderPosition {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.gridWrapper::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+.gridWrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.gridWrapper::-webkit-scrollbar-thumb {
+    background: #69D1C5;
+    border-radius: 10px;
+}
+
+.gridWrapper::-webkit-scrollbar-thumb:hover {
+    background: #54A79D;
+}
+
+@media only screen and (max-width: 480px) {
+  .deckGrid{
+    grid-template-columns: 1fr;
+    width: 80%;
+    height: 50vh;
+  }
 }

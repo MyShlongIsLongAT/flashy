@@ -1,79 +1,97 @@
 .learnBlock {
-    padding:3vh;
-    font-size: 2.1vh;
-    background-color: #424250;
-    height: 25vh;
-    border-radius: 15px;
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 2.5vh;
+  font-size: 2.1vh;
+  background-color: #424250;
+  height: 25vh;
+  border-radius: 15px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .input {
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 20%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 5vw;
 }
 
-.interactionButtons{
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 3vw;
+.interactionButtons {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2.5vw;
+  justify-items: center;
+  align-items: center;
 }
 
-.input input {
-    padding-left: 1vw;
-    background-color: #757575;
-    border-style: solid;
-    border-radius: 10px;
-    height: 6vh;
-    color: #FFFFFF;
-    font-family: "Jaldi";
-    font-size: 2vh;
-    width: 40vh;
+.fillerDiv {
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
-.input input::placeholder{
-    color: #FFFFFF;
+.inputField{
+  width: 100%;
 }
 
-.input button {
-    font-family: "Jaldi";
-    font-size: 2vh;
-    width: 4vw;
-    height: 6vh;
-    text-align: center;
-    border-style: none;
-    border-radius: 15px;
-    background-color: #69D1C5;
-    color: #FFFFFF;
+.inputField input {
+  background-color: #757575;
+  border-style: solid;
+  border-radius: 10px;
+  height: 5vh;
+  color: #ffffff;
+  font-family: "Jaldi";
+  font-size: 2vh;
+  width: 96%;
 }
 
-.input button:hover {
-    background-color: #54A79D;
+.inputField input::placeholder {
+  color: #ffffff;
 }
 
-.input input:focus{
-    outline: none;
+.fillerDiv button {
+  font-family: "Jaldi";
+  font-size: 2vh;
+  height: 5vh;
+  text-align: center;
+  border-style: none;
+  border-radius: 15px;
+  background-color: #69d1c5;
+  color: #ffffff;
+  width: 10vh;
 }
 
-.definition{
-    margin-top: 2vh;
-    font-weight: bolder;
+.fillerDiv button:hover {
+  background-color: #54a79d;
 }
 
-.correctInput{
-    border-width: thick;
-    border-color: #2B9720;
+.fillerDiv input:focus {
+  outline: none;
 }
 
-.wrongInput{
-    border-width: thick;
-    border-color: #E83151;
+.definition {
+  margin-top: 2vh;
+  font-weight: bolder;
 }
 
-.hintInput{
-    border-width: thick;
-    border-color: #F2E94E;
+.correctInput {
+  border-width: thick;
+  border-color: #2b9720;
+}
+
+.wrongInput {
+  border-width: thick;
+  border-color: #e83151;
+}
+
+.hintInput {
+  border-width: thick;
+  border-color: #f2e94e;
+}
+
+@media only screen and (max-width: 600px) {
+  .input {
+    grid-template-columns: 100%;
+    grid-row-gap: 2.5vh;
+  }
 }

@@ -6,11 +6,7 @@ import Footer from "../../components/Footer/Footer";
 import aboutShlongImage from './1200px-Johannes_Gutenberg.jpg'
 
 const AboutPage = () => {
-    const aboutStory = "Hello, I'm Florian!\n" + "Since 2019, I've been actively engaged in web development, " +
-        "driven by my strong interest in economics and computer science during my high school years.\n" + "\n" + "The " +
-        "birth of Flashy stemmed from two motivations. Firstly, I wanted to expand my expertise in client-side " +
-        "programming, delving deeper into its intricacies. Secondly, I aimed to develop my very own flashcard solution " +
-        "as an alternative to Quizlet, which unfortunately became inaccessible due to a paywall."
+    const aboutStory = "just having fun doing web development.\n\npaywalls suck :("
 
     return (
         <div>
@@ -19,10 +15,10 @@ const AboutPage = () => {
                 <div className={styles.contentGrid}>
                     <div className={styles.leftColumn}>
                         <div className={styles.headingWrapper}>
-                            <div className={mainStyles.title}>
+                            <div className={styles.title}>
                                 MyShlongIsLongAT
                             </div>
-                            <div className={mainStyles.subtitle}>aka Florian</div>
+                            <div className={styles.subtitle}>aka Florian</div>
                         </div>
                         <div className={styles.aboutContent}>
                             {aboutStory.split('\n').map((line, index) => (<React.Fragment key={index}>
