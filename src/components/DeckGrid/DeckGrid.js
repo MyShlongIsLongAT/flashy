@@ -5,7 +5,7 @@ import linkStyles from '../../styles/main.module.css'
 import {DataContext} from "../../services/DataContext";
 import DeckBlock from "./DeckBlock";
 import {DeckContext} from "../../services/DeckContext";
-import {AiOutlinePlus} from "react-icons/ai";
+import {AiFillPlusCircle} from "react-icons/ai";
 import DeckUploader from "../DeckUploader/DeckUploader";
 import {Link} from "react-router-dom";
 
@@ -34,7 +34,7 @@ const DeckGrid = () => {
                             to="/overview" className={linkStyles.linkItem}><DeckBlock deckName={deck}/></Link>
                         </div>)
                     }
-                    <div className={gridBoxStyle.deckWrapper} onClick={toggleDeckAddPopup}><AiOutlinePlus/></div>
+                    <div className={gridBoxStyle.deckWrapper} onClick={toggleDeckAddPopup}><AiFillPlusCircle size={30}/></div>
                 </div>
             </div>}
         </div>
